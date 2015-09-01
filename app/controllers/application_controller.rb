@@ -12,7 +12,8 @@ class ApplicationController < ActionController::Base
     if request.referer == sign_in_url
       super
     else
-      stored_location_for(resource) || request.env['HTTP_REFERER'] || request.referer || root_path
+      #stored_location_for(resource) || request.env['HTTP_REFERER'] || request.referer || root_path
+      stored_location_for(resource) || request.referer || root_path
     end
   end
 end
