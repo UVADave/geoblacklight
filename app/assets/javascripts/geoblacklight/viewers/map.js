@@ -8,7 +8,8 @@ GeoBlacklight.Viewer.Map = GeoBlacklight.Viewer.extend({
     * @type {L.LatLngBounds}
     */
     //bbox: [[-80, -180], [80, 180]]
-    bbox: [[0.73970, -160.20524], [64.68346, -42.43180]]
+    //-152.578125 -49.61071 36.210938 73.726595
+    bbox: [[0.73970, -161.20524], [64.68346, -42.43180]]
   },
   
   overlay: L.layerGroup(),
