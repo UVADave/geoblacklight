@@ -8,6 +8,12 @@ $serif-fonts: '"Crimson Text", "Times New Roman", Times, serif';
 $sans-serif-fonts: 'Cabin, sans-serif';
 
 $uva-orange: #F36F21;
+$uva-blue: #1D3E6E;
+$footer-text-color: #eef2f8;
+
+[data-map="home"] {
+  height: 600px;
+}
 
 header[role=banner] {
 
@@ -46,6 +52,22 @@ header[role=banner] {
       font-family: Cabin, sans-serif;
       font-size: 18px;
 
+    }
+  }
+}
+
+footer {
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  background-color: $uva-blue;
+  color: $footer-text-color;
+  line-height: 2em;
+
+  a {
+    color: $footer-text-color;
+    &:hover {
+      color: $footer-text-color;
     }
   }
 }
