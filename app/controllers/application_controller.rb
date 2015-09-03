@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    session[:prefious_url] || root_path
+    session[:previous_url] || root_path
     #sign_in_url = new_user_session_url
     #if request.referer == sign_in_url
       #super
