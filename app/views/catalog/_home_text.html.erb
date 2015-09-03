@@ -29,7 +29,7 @@
           <p class="explanation">Optional: To zoom in on a specific area, hold down the Shift key while drawing the bounding box. To pan the map, click and drag.</p>
         </div>
 
-      <div class='col-md-12 text-center'>
+      <div class='col-md-12'>
         <%#= content_tag :h3, t('geoblacklight.home.map_heading') %>
         <%= content_tag :div, '', id: 'map', data: { map: 'home', 'catalog-path'=> catalog_index_path , 'map-bbox' => params[:bbox], basemap: geoblacklight_basemap } %>
       </div>

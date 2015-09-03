@@ -22,6 +22,9 @@ GeoBlacklight.Viewer.Map = GeoBlacklight.Viewer.extend({
     this.map.addLayer(this.selectBasemap());
     this.map.addLayer(this.overlay);
 
+    // Add layer controller of basemaps array
+    L.control.layers(GeoBlacklight.Basemaps, null).addTo(this.map);
+
     if (this.data.map !== 'index') {
       this.addBoundsOverlay(this.options.bbox);
     }
