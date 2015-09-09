@@ -8,12 +8,39 @@ $serif-fonts: '"Crimson Text", "Times New Roman", Times, serif';
 $sans-serif-fonts: 'Cabin, sans-serif';
 
 $uva-orange: #F36F21;
+$search-orange: rgb(216,124,34);
+$ask-orange: rgb(243,153,59);
 $uva-blue: #1D3E6E;
+$header-blue: rgb(6,32,56);
+$search-button-blue: rgb(16,51,102);
 $footer-text-color: #eef2f8;
+$anchor-color: rgb(80,146,248);
+$search-green: rgb(32,138,155);
+$light-green: rgb(167,220,228);
+$button-red: rgb(209,60,58);
 
 [data-map="home"] {
   height: 600px;
 }
+
+.darkblue {
+  background-color: $header-blue;
+
+  a {
+    color: $ask-orange;
+  }
+}
+
+.recent-searches {
+  background: $search-orange;
+  color: #fff;
+}
+
+#header-navbar {
+  background-color: #fff;
+  color: $search-button-blue;
+}
+
 
 #sidebar {
 
