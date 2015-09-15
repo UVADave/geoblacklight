@@ -227,7 +227,7 @@ class CatalogController < ApplicationController
     # 'esriWorldPhysical'
     # 'esriNatGeoWorldMap'
     # 'esriWorldTopoMap'
-    config.basemap_provider = 'esriWorldTopoMap'
+    config.basemap_provider = 'National Geographic Map'
   end
 
 
