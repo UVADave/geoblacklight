@@ -24,10 +24,13 @@ $button-red:         rgb(209,60,58);
 
 $gray:               #F2F2F2;
 
+.bluetext { backgound-color: $search-button-blue; }
+
 body {
   font: $sans-serif-fonts;
 }
 
+// TODO: refactor this to be a real name
 .darkblue {
   background-color: $header-blue;
   height: 40px;
