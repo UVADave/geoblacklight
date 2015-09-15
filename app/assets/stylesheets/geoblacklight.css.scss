@@ -21,11 +21,54 @@ $anchor-color:       rgb(80,146,248);
 $search-green:       rgb(32,138,155);
 $light-green:        rgb(167,220,228);
 $button-red:         rgb(209,60,58);
-
+$dark-gray:          #818181;
 $gray:               #F2F2F2;
 
-.bluetext { backgound-color: $search-button-blue; }
+/*Utility*/
 
+.bluetext { backgound-color: $search-button-blue; }
+.light-green { background-color: $light-green; }
+
+@mixin circle($background, $size) {
+  display: inline-block;
+  height: $size;
+  width: $size;
+  line-height: $size;
+  border-radius: $size / 2;
+  background: $background;
+  text-align: center;
+}
+
+.privacy {
+  @include circle($light-green, 60px);
+  font-size: 24px;
+}
+
+.hollow {
+  @include circle('#fff', 30px);
+  box-shadow: 0 0 0 3px rgba(0,0,0, 0.75);
+}
+
+.info-box {
+  margin: 5px 3em;
+  padding: 5px 3em; 
+
+
+  background-color: #fff;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+  .larger {
+    color: #000;
+    font-size: 16px;
+  }
+
+  small {
+    font-size: 14px;
+    color: $dark-gray;
+  }
+}
+
+/*Components*/
 body {
   font: $sans-serif-fonts;
 }

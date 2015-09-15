@@ -34,6 +34,9 @@
         <%= yield %>
       </div>
 
-    <%= render :partial => 'shared/footer' %>
+      <%= render :partial => 'shared/footer' %>
+
+      <%= javascript_include_tag "//use.typekit.com/dcu6kro.js" %>
+      <script>try{Typekit.load();}catch(e){}</script>
   </body>
 </html>
