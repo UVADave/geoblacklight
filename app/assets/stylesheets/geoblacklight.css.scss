@@ -40,8 +40,8 @@ $gray:               #F2F2F2;
 }
 
 .privacy {
-  @include circle($light-green, 60px);
-  font-size: 24px;
+  @include circle($light-green, 50px);
+  font-size: 22px;
 }
 
 .hollow {
@@ -49,17 +49,28 @@ $gray:               #F2F2F2;
   box-shadow: 0 0 0 3px rgba(0,0,0, 0.75);
 }
 
-.info-box {
-  margin: 5px 3em;
-  padding: 5px 3em; 
 
+.info-box {
+  padding: 25px 75px;
 
   background-color: #fff;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  line-height: 1em;
+
+  position: relative;
+  margin-top: -50px;
+  margin-bottom: 25px;
+
+  i {
+    float: left;
+    margin-right: 15px;
+    color: #fff;
+  }
 
   .larger {
     color: #000;
     font-size: 16px;
+    margin-top: 3px;
   }
 
   small {
@@ -135,6 +146,7 @@ body {
 .recent-searches {
   background: $search-orange;
   color: #fff;
+  height: 140px;
 }
 
 
