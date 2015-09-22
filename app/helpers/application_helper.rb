@@ -1,4 +1,15 @@
 module ApplicationHelper
+
+  ##
+  # Render a 2x image
+  #
+  # @param [default_name] Image name
+  # @return [String]
+  def retina_image_tag(default_name, options={})
+    retina_name = default_name.gsub(%r{\.\w+$}, '@2x\0')
+    image_tag(default_name, options.merge('data-src2x' => "#{asset_path(retina_name)}"))
+  end
+
   ##
   # Render the main content partial for a document
   #
