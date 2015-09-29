@@ -14,12 +14,6 @@
     <%= link_to_document document, document_show_link_field(document), counter: counter, title: document['dc_title_s'] %>
   </h3>
 
-  <div class="col-md-12">
-    <p class="small">
-    <%= document['solr_year_i'] %>. <i><%= document['dc_creator_sm'].nil?? '' : document['dc_creator_sm'].join(', ') %></i>. <%= snippit(document['dc_description_s']) %>. <%= document['dc_publisher_s'] %>.
-    </p>
-  </div>
-
 
 <% end %>
 

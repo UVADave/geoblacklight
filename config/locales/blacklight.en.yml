@@ -8,15 +8,15 @@ en:
       truncate: '…'
 
     pagination_compact:
-      previous: '&laquo; Previous'
-      next: 'Next &raquo;'
+      previous: '<span class="glyphicon glyphicon-arrow-left paginate-previous" aria-hidden="true"></span>'
+      next: '<span class="glyphicon glyphicon-arrow-right paginate-next" aria-hidden="true"></span>'
 
   blacklight:
     application_name: 'Virgo GIS'
 
     header_links:
-      login: 'Login'
-      logout: 'Log Out'
+      login: 'Sign In'
+      logout: 'Sign Out'
       bookmarks: 'Bookmarks'
       saved_searches: 'Saved Searches'
       search_history: 'History'
