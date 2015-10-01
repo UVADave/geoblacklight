@@ -212,6 +212,22 @@ class CatalogController < ApplicationController
     config.add_show_tools_partial :web_services, if: proc { |_context, _config, options| options[:document] && (Settings.WEBSERVICES_SHOWN & options[:document].references.refs.map(&:type).map(&:to_s)).any? }
     config.add_show_tools_partial :metadata, if: proc { |_context, _config, options| options[:document] && (Settings.METADATA_SHOWN & options[:document].references.refs.map(&:type).map(&:to_s)).any? }
     config.add_show_tools_partial :downloads, partial: 'downloads', if: proc { |_context, _config, options| options[:document] }
+
+    # Configure basemap provider for GeoBlacklight maps (uses https only basemap
+    # providers with open licenses)
+    # Valid basemaps include:
+    # 'mapquest' http://developer.mapquest.com/web/products/open/map
+    # 'positron' http://cartodb.com/basemaps/
+    # 'darkMatter' http://cartodb.com/basemaps/
+    #
+    # Added in this override:
+    # 'mapquestAerial'
+    # 'esriWorldImagery'
+    # 'esriWorldShadedRelief'
+    # 'esriWorldPhysical'
+    # 'esriNatGeoWorldMap'
+    # 'esriWorldTopoMap'
+    config.basemap_provider = 'National Geographic Map'
   end
 
 

@@ -1,0 +1,6 @@
+<div id="documents" class="docView col-md-4">
+  <%= render documents, :as => :document %>
+  <%= render :partial => "paginate_compact", :object => @response if show_pagination? %>
+</div>
+
+<%= content_tag :div, '', id: 'map', data: { map: 'index', 'catalog-path'=> catalog_index_path , 'map-bbox' => params[:bbox], basemap: geoblacklight_basemap } %>
