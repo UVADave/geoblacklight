@@ -70,7 +70,7 @@ en:
 
     search_history:
       clear:
-        action_title: 'Clear Search History'
+        action_title: 'Clear All History'
         action_confirm: 'Clear your search history?'
         success: 'Cleared your search history.'
         failure: 'There was a problem clearing your search history.'
