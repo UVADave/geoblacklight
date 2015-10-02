@@ -19,9 +19,10 @@
     <![endif]-->
   </head>
   <body class="<%= render_body_class %>">
-    <%= render :partial => 'shared/uva_navbar' %>
-    <%= render :partial => 'shared/header_navbar' %>
-
+    <div class="navbar-fixed-top">
+      <%= render :partial => 'shared/uva_navbar' %>
+      <%= render :partial => 'shared/header_navbar' %>
+    </div>
     <%= render partial: 'shared/ajax_modal' %>
 
     <div id="main-container">

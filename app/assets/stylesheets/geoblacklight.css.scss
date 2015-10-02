@@ -6,14 +6,14 @@
 @import url("http://fonts.googleapis.com/css?family=Material+Icons|Crimson+Text:400,600|Open+Sans:400,300,600");
 $serif-fonts: '"Crimson Text", "Times New Roman", Times, serif';
 /*$sans-serif-fonts: 'Cabin, sans-serif';*/
-$logo-fonts: 'trajan-pro, "Trajan Pro", Trajan, Georgia, serif';
-$sans-serif-fonts: 'Open Sans, Helvetica, sans-serif';
+$logo-fonts: "trajan-pro","Trajan Pro","Trajan",Georgia,serif;
+$sans-serif-fonts: "Open Sans", Helvetica, sans-serif;
 
 $uva-orange:         #F36F21;
 $search-orange:      #DA7C0A;
 $ask-orange:         #F59A2C;
 $text-blue:          rgb(16,69,122);
-$uva-blue:           #1D3E6E;
+$uva-blue:           #0D3268;
 $header-blue:        rgb(6,32,56);
 $search-button-blue: rgb(16,51,102);
 $footer-text-color:  #eef2f8;
@@ -47,19 +47,28 @@ $gray:               #F2F2F2;
 .page-heading {
   padding-top: 30px;
 }
+
+.navbar-default .navbar-nav > li > a {
+  color: $uva-blue;
+}
+
 .table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #f5f5f5;
 }
+
 .table > tbody > tr > td {
   border-top: none;
   border-radius: 3px;
 }
+
 a {
   color: #4C8FFB;
 }
+
 .btn {
   text-transform: uppercase;
 }
+
 .circle {
   position: absolute;
   width: 42px;
@@ -69,6 +78,12 @@ a {
   display: inline-block;
   vertical-align: middle;
   border-radius: 50%;
+}
+
+#logo {
+  font-family: $logo-fonts;
+  font-size: 1.5em;
+  color: $uva-blue;
 }
 
 i.circle {
@@ -82,10 +97,23 @@ i.circle {
   padding-left: 25px;
 } 
 
+#main-container {
+  padding-top: 90px;
+}
+
+.info-box, nav {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar-default {
+  border-radius: 0px;
+}
+.navbar-form {
+  width: 45%;
+}
 .info-box {
-  padding: 15px 75px;
+  padding: 18px 0px 10px 75px;
   background-color: #fff;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   border-radius: 2px;
   line-height: 1em;
   position: relative;
@@ -127,7 +155,9 @@ body {
   }
 
   .logo img {
+    margin-top: 3px;
     padding-top: 7px;
+    height: 25px;
   }
 
   .ask-librarian {
@@ -146,18 +176,9 @@ body {
     color: $search-button-blue;
     letter-spacing: -1px;
     text-shadow: 0 -1px 0 #f2f6fc; /* why is there a text shadow */
-    color: $search-button-blue;
 
     &:hover, &:visited, &:link { color: $search-button-blue; }
     &:hover { text-decoration: underline; }
-  }
-
-  .virgo_logo {
-    display: block;
-    font-size: 2em;
-    font: $logo-fonts;
-
-    a { font-size: 36px; }
   }
 
   #user-util-collapse {
@@ -223,17 +244,35 @@ header[role=banner] {
       padding-top: 15px;
       font-family: Cabin, sans-serif;
       font-size: 18px;
-
     }
+  }
+}
+#map {
+  height: 100vh;
+}
+.no-pad {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.footer-links li {
+  display: inline;
+
+  a {
+   padding-left: 10px;
+   padding-right: 10px;
   }
 }
 
 footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
   margin-top: 0;
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: $gray;
-  color: $search-button-blue;
+  background-color: none;
+  color: white;
   line-height: 2em;
   font-size: 16px;
 
@@ -250,7 +289,7 @@ footer {
   }
 
   a {
-    color: $search-button-blue;
+    color: white;
     &:hover {
       color: $footer-text-color;
     }
