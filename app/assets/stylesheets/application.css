@@ -11,5 +11,6 @@
  * file per style scope.
  */
 
-@import url("//fonts.googleapis.com/css?family=Material+Icons|Crimson+Text:400,600|Open+Sans:400,300,600");
-@import "geoblacklight.css";
+ /*
+  *= require geoblacklight
+ */
