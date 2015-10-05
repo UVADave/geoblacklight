@@ -248,7 +248,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jettywrapper
   jquery-rails
-  mysql2
+  mysql2 (~> 0.4.1)
   net-ldap (~> 0.11)
   rails (~> 4.2.0)
   rsolr (~> 1.0.6)

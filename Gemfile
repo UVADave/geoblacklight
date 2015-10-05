@@ -27,7 +27,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Unicorn as the app server
 # gem 'unicorn'
 
-gem 'mysql2'
+group :production, :staging do
+  gem 'mysql2', '~>0.4.1'
+end
 
 group :development do
  # Use sqlite3 as the database for Active Record
