@@ -228,6 +228,9 @@ class CatalogController < ApplicationController
     # 'esriNatGeoWorldMap'
     # 'esriWorldTopoMap'
     config.basemap_provider = 'National Geographic Map'
+
+
+    config.per_page = [20, 50, 100]
   end
 
 
