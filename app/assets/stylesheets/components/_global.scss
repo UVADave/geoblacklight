@@ -41,10 +41,10 @@ a {
   padding-bottom: 30px;
 }
 
-.text-muted, 
-.appliedFilter .filterName:after, 
-.facet-values .remove, 
-.search_history .filterName, 
+.text-muted,
+.appliedFilter .filterName:after,
+.facet-values .remove,
+.search_history .filterName,
 .search_history .filterSeparator {
   color: #777777;
 }
@@ -138,7 +138,7 @@ i.circle {
 }
 .search_history .constraint {
   padding-left: 25px;
-} 
+}
 
 #main-container {
   //padding-top: 108px;
@@ -338,9 +338,6 @@ footer {
 
   a {
     color: $uva-blue;
-    &:hover {
-      color: $footer-text-color;
-    }
   }
 }
 
@@ -395,4 +392,3 @@ footer {
 .z-depth-5{
     @include box-shadow-2(0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22));
 }
-
