@@ -2,6 +2,7 @@
   <%# if there are no input/search related params, display the "home" partial -%>
   <%= render 'home' %>
 <% else %>
+  <div class="fixed-header-padding"></div>
   <div class="container-fluid">
     <div id="sidebar" class="col-md-3 col-sm-4">
       <%= render 'search_sidebar' %>

@@ -1,0 +1,398 @@
+//Default styles
+
+html {
+ box-sizing: border-box;
+}
+*, *:before, *:after {
+ box-sizing: inherit;
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+  // Gets rid of tap active state
+  -webkit-tap-highlight-color: transparent;
+}
+
+// classic clearfix
+.clearfix {
+  clear: both;
+}
+
+/*Utility*/
+.bluetext { backgound-color: $search-button-blue; }
+.light-green { background-color: $light-green; }
+
+@mixin circle($background, $size) {
+  display: inline-block;
+  height: $size;
+  width: $size;
+  line-height: $size;
+  border-radius: $size / 2;
+  background: $background;
+  text-align: center;
+}
+
+.fixed-header-padding {
+  padding-bottom: 30px;
+}
+
+.constraints-container {
+  padding-bottom: 30px;
+}
+
+.text-muted, 
+.appliedFilter .filterName:after, 
+.facet-values .remove, 
+.search_history .filterName, 
+.search_history .filterSeparator {
+  color: #777777;
+}
+
+.section-heading {
+  margin: 0rem 0 1.84rem 0;
+  //margin: 1rem 0 2.84rem 0;
+}
+
+.btn-search {
+  background-color: #072A4A;
+}
+
+.search_history .constraint {
+  display: block;
+  text-indent: -16px;
+  padding-left: 16px;
+}
+
+.input-group .form-control:not(:first-child):not(:last-child) {
+  border-radius: 3px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border: none;
+  padding: 18px;
+}
+
+.hollow {
+  @include circle('#fff', 30px);
+  box-shadow: 0 0 0 3px rgba(0,0,0, 0.75);
+}
+
+/* To be organized */
+.page-heading {
+  padding-top: 30px;
+}
+
+.leaflet-container {
+  font: 12px/1.5 "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: $uva-blue;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f5f5f5;
+}
+
+.table > tbody > tr > td {
+  border-top: none;
+  border-radius: 3px;
+}
+
+a {
+  color: #4C8FFB;
+}
+
+.btn {
+  text-transform: uppercase;
+}
+.navbar {
+  margin-bottom: -2px;
+  z-index: 10000;
+}
+.navbar {
+  min-height: 70px;
+}
+.circle {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+  left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+#logo {
+  font-family: $logo-fonts;
+  font-size: 2em;
+  color: $uva-blue;
+}
+
+i.circle {
+  font-size: 18px;
+  line-height: 42px;
+  color: #fff;
+  background-color: $light-green;
+  text-align: center;
+}
+.search_history .constraint {
+  padding-left: 25px;
+} 
+
+#main-container {
+  //padding-top: 108px;
+}
+.navbar-default {
+  padding-top: 8px;
+  background-color: #FFFFFF;
+}
+.info-box, nav {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar-default {
+  border-radius: 0px;
+}
+.navbar-form {
+  //width: 45%;
+}
+.info-box {
+  padding: 18px 0px 10px 75px;
+  background-color: #fff;
+  border-radius: 2px;
+  line-height: 1em;
+  position: relative;
+  margin-top: -50px;
+  margin-bottom: 25px;
+
+  i {
+    float: left;
+    margin-right: 15px;
+    color: #fff;
+  }
+
+  .larger {
+    color: #000;
+    font-size: 16px;
+    margin-top: 3px;
+  }
+
+  small {
+    font-size: 14px;
+    color: $dark-gray;
+  }
+}
+
+/*Components*/
+body {
+  font-family: $sans-serif-fonts;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// TODO: refactor this to be a real name
+.darkblue {
+  background-color: $header-blue;
+  height: 40px;
+
+  a {
+    color: $ask-orange;
+  }
+
+  .logo img {
+    margin-top: 3px;
+    padding-top: 7px;
+    height: 25px;
+  }
+
+  .ask-librarian {
+    padding-top: 10px;
+  }
+}
+
+.orange { background-color: $search-orange }
+
+#header-navbar {
+
+  height: 100px; // TODO mobile overrides
+  padding-top: 40px;
+
+  a {
+    color: $search-button-blue;
+    letter-spacing: -1px;
+    text-shadow: 0 -1px 0 #f2f6fc; /* why is there a text shadow */
+
+    &:hover, &:visited, &:link { color: $search-button-blue; }
+    &:hover { text-decoration: underline; }
+  }
+
+  #user-util-collapse {
+    font-size: 16px;
+  }
+
+}
+
+
+/*Map*/
+
+[data-map="home"] {
+  height: 600px; // TODO mobile laysouts
+}
+
+/*search*/
+
+
+.recent-searches {
+  background: $search-orange;
+  color: #fff;
+  min-height: 185px;
+}
+
+
+#sidebar {
+
+}
+
+header[role=banner] {
+
+  padding-bottom: 15px;
+
+  h1 {
+    font-size: 2.25em;
+    line-height: 1.5em;
+    margin: 0;
+    font-family: $sans-serif-fonts;
+  }
+
+  .introduction {
+    font-size: 1.25em;
+    line-height: 1.33333em;
+    margin-top: 0;
+    font-family: $sans-serif-fonts;
+    color: #999;
+  }
+}
+
+.search-container {
+  background: #fcfcfc;
+  border: 1px solid rgba(51,51,51, 0.125);
+  border-width: 1px 0 0;
+
+  .search-box {
+    /*padding-top: 15px;*/
+    /*padding-bottom: 20px;*/
+
+    .explanation {
+      margin-left: 2em;
+      margin-right: 2em;
+      color: #555;
+      padding-top: 15px;
+      font-size: 18px;
+    }
+  }
+}
+
+#map {
+  height: 80vh;
+}
+.no-pad {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.footer-links li {
+  display: inline;
+
+  a {
+   padding-left: 10px;
+   padding-right: 10px;
+  }
+}
+.footer-padding {
+  margin-top: 75px;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  margin-top: 0;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  background-color: $gray;
+  color: $uva-blue;
+  line-height: 2em;
+  font-size: 16px;
+
+  nav {
+    ul {
+      list-style-type: none;
+
+      li {
+        display: inline;
+        padding-right: 35px;
+      }
+
+    }
+  }
+
+  a {
+    color: $uva-blue;
+    &:hover {
+      color: $footer-text-color;
+    }
+  }
+}
+
+.geoblacklight-uva {
+  color: $uva-orange;
+}
+
+.geoblacklight-multilinestring:before,
+.geoblacklight-multipolygon:before
+{
+  display: inline-block;
+  font-family: "geoblacklight-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.geoblacklight-multilinestring:before { content: "\f118"; }
+.geoblacklight-multipolygon:before { content: "\f107"; }
+
+/*Search*/
+.filterName { padding-right: 5px; }
+
+.page_links { padding: 20px; width: 100%; }
+.page_entries { margin: 0em 2em; }
+
+
+// Z-levels
+
+.z-depth-1{
+    @include box-shadow-2(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
+}
+.z-depth-1-half{
+    @include box-shadow-2(0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15));
+}
+.z-depth-2{
+    @include box-shadow-2(0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
+}
+.z-depth-3{
+    @include box-shadow-2(0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19));
+}
+.z-depth-4{
+    @include box-shadow-2(0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21));
+}
+.z-depth-5{
+    @include box-shadow-2(0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22));
+}
+

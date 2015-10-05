@@ -3,7 +3,7 @@
 <div class="recent-searches">
   <div class="container">
     <div class="col-md-12">
-      <h2 class='page-heading'><%=t('blacklight.search_history.title')%></h2>
+      <h2 class='page-heading light'><%=t('blacklight.search_history.title')%></h2>
       <p class="description">Check out your recent searches and bounding box history information</p>
     </div>
 
@@ -17,8 +17,8 @@
       <%- if @searches.blank? -%>
         <h3 class='section-heading'><%=t('blacklight.search_history.no_history')%></h3>
       <%- else -%>
-        <%= link_to t('blacklight.search_history.clear.action_title'), clear_search_history_path, :method => :delete, :data => { :confirm => t('blacklight.search_history.clear.action_confirm') }, :class => 'btn btn-danger pull-right' %>
-        <h3 class='section-heading'><%=t('blacklight.search_history.recent')%></h3>
+        <%= link_to t('blacklight.search_history.clear.action_title'), clear_search_history_path, :method => :delete, :data => { :confirm => t('blacklight.search_history.clear.action_confirm') }, :class => 'btn red darken-1 pull-right' %>
+        <h3 class='section-heading light'><%=t('blacklight.search_history.recent')%></h3>
         <table class="table table-striped search_history">
           <%-  @searches.each_with_index do |search,index| -%>
             <%= content_tag :tr, :id => "document_#{index + 1}" do %>
@@ -28,7 +28,7 @@
                   <%- if current_or_guest_user && search.saved? -%>
                     <%= button_to t('blacklight.search_history.forget'), forget_search_path(search.id), :class => 'btn btn-default' %>
                   <%- else -%>
-                    <%= button_to t('blacklight.search_history.save'), save_search_path(search.id), :method => :put, :class => 'btn btn-default' %>
+                    <%= button_to t('blacklight.search_history.save'), save_search_path(search.id), :method => :put, :class => 'btn grey' %>
                   <%- end -%>
                 </td>
               <%- end -%>
@@ -38,6 +38,6 @@
       <%- end -%>
     </div>
   </div>
-
+  <div class="footer-padding"></div>
 
 
