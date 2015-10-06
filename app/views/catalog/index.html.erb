@@ -1,3 +1,5 @@
+<% params['bbox'] ||= "-126.210937 4.65308 -32.519531 44.150681" %>
+
 <% unless has_search_parameters? %>
   <%# if there are no input/search related params, display the "home" partial -%>
   <%= render 'home' %>
