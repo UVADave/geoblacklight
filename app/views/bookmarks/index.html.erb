@@ -5,11 +5,11 @@
 
   <%- if current_or_guest_user.blank? -%>
 
-    <h3 class='section-heading'><%= t('blacklight.bookmarks.need_login') %></h3>
+    <h3 class='section-heading light'><%= t('blacklight.bookmarks.need_login') %></h3>
 
   <%- elsif @document_list.blank? -%>
 
-    <h3 class='section-heading'><%= t('blacklight.bookmarks.no_bookmarks') %></h3>
+    <h3 class='section-heading light'><%= t('blacklight.bookmarks.no_bookmarks') %></h3>
   <% else %>
     <%= render 'sort_and_per_page' %>
     <%= render partial: 'tools', locals: { document_list: @document_list } %>

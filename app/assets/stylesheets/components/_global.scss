@@ -22,6 +22,8 @@ a {
 /*Utility*/
 .bluetext { backgound-color: $search-button-blue; }
 .light-green { background-color: $light-green; }
+.right { float:right; }
+.left { float:left; }
 
 @mixin circle($background, $size) {
   display: inline-block;
@@ -122,13 +124,15 @@ a {
   vertical-align: middle;
   border-radius: 50%;
 }
-
+.navbar-form {
+  margin-top: 4px;
+}
 #logo {
   font-family: $logo-fonts;
   font-size: 2em;
   color: $uva-blue;
+  padding-top: 15px;
 }
-
 i.circle {
   font-size: 18px;
   line-height: 42px;
@@ -241,17 +245,15 @@ body {
 }
 
 /*search*/
-
-
-.recent-searches {
-  background: $search-orange;
+.recent-searches, .saved-searches {
   color: #fff;
   min-height: 185px;
 }
-
-
-#sidebar {
-
+.recent-searches {
+  background: $search-orange;
+}
+.saved-searches {
+  background: $search-green;
 }
 
 header[role=banner] {
