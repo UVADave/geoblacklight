@@ -1,5 +1,6 @@
-// Utility Color Classes
-
+/************************
+  Utility Color Classes
+*************************/ 
 
 $red: (
   "lighten-5":  #FFEBEE,
@@ -374,7 +375,6 @@ $colors: (
     color: $color_value !important;
   }
 }
-
 
 // usage: color("name_of_color", "type_of_color")
 // to avoid to repeating map-get($colors, ...)

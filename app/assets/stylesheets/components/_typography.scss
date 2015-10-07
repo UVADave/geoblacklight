@@ -1,5 +1,10 @@
-$title-font: 'Open Sans', sans-serif;
-$body-font: 'Open Sans', sans-serif;
+/*********************
+  Typography
+**********************/
+
+$logo-fonts: "trajan-pro","Trajan Pro","Trajan",Georgia,serif;
+$heading-font: "Open Sans", Helvetica, sans-serif;
+$body-font: "Open Sans", Helvetica, sans-serif;
 
 a {
   color: #099DB0;
@@ -44,7 +49,7 @@ html{
   color: $off-black;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: $title-font;
+  font-family: $heading-font;
   line-height: 1.1;
 }
 h4 {

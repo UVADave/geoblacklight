@@ -23,7 +23,7 @@
 
     <%- else -%>
       <p>
-      <%= link_to t('blacklight.saved_searches.clear.action_title'), clear_saved_searches_path, :method => :delete, :data => { :confirm => t('blacklight.saved_searches.clear.action_confirm') } %>
+      <%= link_to t('blacklight.saved_searches.clear.action_title'), clear_saved_searches_path, :method => :delete, :class => 'btn red darken-1 pull-right', :data => { :confirm => t('blacklight.saved_searches.clear.action_confirm') } %>
       </p>
 
       <h3 class='section-heading light'><%= t('blacklight.saved_searches.list_title') %></h3>
@@ -31,7 +31,7 @@
         <%- @searches.each do |search| -%>
           <tr>
             <td><%= link_to_previous_search(search.query_params) %></td>
-            <td class="right"><%= button_to t('blacklight.saved_searches.delete'), forget_search_path(search.id), :class => 'btn grey' %></td>
+            <td class="_right"><%= button_to t('blacklight.saved_searches.delete'), forget_search_path(search.id), :class => 'btn grey' %></td>
           </tr>
         <%- end -%>
       </table>

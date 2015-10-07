@@ -8,9 +8,12 @@
 // Reset
 @import "components/normalize";
 
-// components
-@import "components/global";
+//Helper/Utility
+@import "components/helper";
+
+// Components
 @import "components/typography";
+@import "components/global";
 @import "components/mediaqueries";
 @import "components/buttons";
 

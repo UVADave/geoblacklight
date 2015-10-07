@@ -1,4 +1,7 @@
-//Default styles
+/********************************
+  Global Default Classes 
+  Note: To Be Organized, kind of a dump now 
+*********************************/
 
 html {
  box-sizing: border-box;
@@ -14,16 +17,9 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-// classic clearfix
-.clearfix {
-  clear: both;
-}
-
 /*Utility*/
 .bluetext { backgound-color: $search-button-blue; }
 .light-green { background-color: $light-green; }
-.right { float:right; }
-.left { float:left; }
 
 @mixin circle($background, $size) {
   display: inline-block;
@@ -34,6 +30,37 @@ a {
   background: $background;
   text-align: center;
 }
+
+/* Search History Pages */
+.recent-searches, .saved-searches {
+  color: #fff;
+  min-height: 185px;
+}
+.recent-searches {
+  background: $search-orange;
+}
+.saved-searches {
+  background: $search-green;
+}
+.search_history .constraint {
+  display: block;
+  text-indent: -16px;
+  padding-left: 16px;
+}
+.circle {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+  left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.filterName { padding-right: 5px; }
+.page_links { padding: 20px; width: 100%; }
+.page_entries { margin: 0em 2em; }
 
 .fixed-header-padding {
   padding-bottom: 30px;
@@ -58,12 +85,6 @@ a {
 
 .btn-search {
   background-color: #072A4A;
-}
-
-.search_history .constraint {
-  display: block;
-  text-indent: -16px;
-  padding-left: 16px;
 }
 
 .input-group .form-control:not(:first-child):not(:last-child) {
@@ -100,13 +121,7 @@ a {
   border-radius: 3px;
 }
 
-a {
-  color: #4C8FFB;
-}
 
-.btn {
-  text-transform: uppercase;
-}
 .navbar {
   margin-bottom: -2px;
   z-index: 10000;
@@ -114,16 +129,7 @@ a {
 .navbar {
   min-height: 70px;
 }
-.circle {
-  position: absolute;
-  width: 42px;
-  height: 42px;
-  overflow: hidden;
-  left: 15px;
-  display: inline-block;
-  vertical-align: middle;
-  border-radius: 50%;
-}
+
 .navbar-form {
   margin-top: 4px;
 }
@@ -190,7 +196,7 @@ i.circle {
 
 /*Components*/
 body {
-  font-family: $sans-serif-fonts;
+  font-family: $body-font;
   font-weight: 400;
   font-style: normal;
 }
@@ -244,17 +250,7 @@ body {
   height: 600px; // TODO mobile laysouts
 }
 
-/*search*/
-.recent-searches, .saved-searches {
-  color: #fff;
-  min-height: 185px;
-}
-.recent-searches {
-  background: $search-orange;
-}
-.saved-searches {
-  background: $search-green;
-}
+
 
 header[role=banner] {
 
@@ -264,14 +260,12 @@ header[role=banner] {
     font-size: 2.25em;
     line-height: 1.5em;
     margin: 0;
-    font-family: $sans-serif-fonts;
   }
 
   .introduction {
     font-size: 1.25em;
     line-height: 1.33333em;
     margin-top: 0;
-    font-family: $sans-serif-fonts;
     color: #999;
   }
 }
@@ -367,30 +361,3 @@ footer {
 .geoblacklight-multilinestring:before { content: "\f118"; }
 .geoblacklight-multipolygon:before { content: "\f107"; }
 
-/*Search*/
-.filterName { padding-right: 5px; }
-
-.page_links { padding: 20px; width: 100%; }
-.page_entries { margin: 0em 2em; }
-
-
-// Z-levels
-
-.z-depth-1{
-    @include box-shadow-2(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
-}
-.z-depth-1-half{
-    @include box-shadow-2(0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15));
-}
-.z-depth-2{
-    @include box-shadow-2(0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
-}
-.z-depth-3{
-    @include box-shadow-2(0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19));
-}
-.z-depth-4{
-    @include box-shadow-2(0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21));
-}
-.z-depth-5{
-    @include box-shadow-2(0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22));
-}
