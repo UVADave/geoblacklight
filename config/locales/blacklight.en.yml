@@ -18,7 +18,7 @@ en:
       login: 'Sign In'
       logout: 'Sign Out'
       bookmarks: 'Bookmarks'
-      saved_searches: 'Saved Searches'
+      saved_searches: 'View Saved'
       search_history: 'History'
 
     welcome: 'Welcome!'
@@ -142,7 +142,7 @@ en:
     search:
       # i18n key 'title' is deprecated and will be removed in Blacklight 6.0
       title: '%{application_name} Search Results'
-      page_title: 
+      page_title:
         title: '%{constraints} - %{application_name} Search Results'
         constraint: '%{label}: %{value}'
         many_constraint_values: '%{values} selected'
@@ -227,4 +227,3 @@ en:
       default: 'entry'
 
     did_you_mean: 'Did you mean to type: %{options}?'
-

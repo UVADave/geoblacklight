@@ -17,7 +17,15 @@
       <%- if @searches.blank? -%>
         <h3 class='section-heading light'><%=t('blacklight.search_history.no_history')%></h3>
       <%- else -%>
-        <%= link_to t('blacklight.search_history.clear.action_title'), clear_search_history_path, :method => :delete, :data => { :confirm => t('blacklight.search_history.clear.action_confirm') }, :class => 'btn red darken-1 pull-right' %>
+        <div class="pull-right">
+          <%- if !@searches.blank? -%>
+            <%= link_to 'View Saved', saved_searches_path, :class => 'btn cyan lighten-2' %>
+            &nbsp;
+          <%- end -%>
+          <%= link_to t('blacklight.search_history.clear.action_title'), clear_search_history_path, :method => :delete, :data => { :confirm => t('blacklight.search_history.clear.action_confirm') }, :class => 'btn red darken-1' %>
+        </div>
+
+
         <h3 class='section-heading light'><%=t('blacklight.search_history.recent')%></h3>
         <table class="table table-striped search_history">
           <%-  @searches.each_with_index do |search,index| -%>
@@ -39,5 +47,3 @@
     </div>
   </div>
   <div class="footer-padding"></div>
-
-
