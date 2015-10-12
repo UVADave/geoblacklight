@@ -383,3 +383,8 @@ footer {
 
 .geoblacklight-multilinestring:before { content: "\f118"; }
 .geoblacklight-multipolygon:before { content: "\f107"; }
+
+/* Blacklight Specific (Mostly Bootstrap) */
+.alert {
+  margin-top: 25px;
+}
