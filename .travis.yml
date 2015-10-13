@@ -3,7 +3,8 @@ rvm:
   - 2.2.1
 after_success:
   - "openssl aes-256-cbc -k $DEPLOY_KEY -in config/deploy_id_rsa_enc_travis -d -a -out config/deploy_id_rsa"
-  - "bundle exec cap deploy"
+  - [[ $TRAVIS_BRANCH = 'master' ]] && bundle exec cap deploy
+  - [[ $TRAVIS_BRANCH = 'develop' ]] && bundle exec cap staging deploy
 env:
   global:
     secure: rvNpxDp69HMPivcZSBT4+tajmY3l5wcDL0qF9dTBS3cKvcL0AhHPPEa6c9m1OUwPzZVj+Z8X43Qp0Y23SYUKJ7TJMD4qu3ZZiB9br+k9zPmgVHPDsjRvImp+qyVHJLi2KAgkDt4xJg8WWzmZWyPvdHw3sWxG/gGX1Be0mj5/b0eyPh/Io/DllOVkrYXFaMy65fckKpon0agCg0+5Ru0zgs/hBJd0J2QYFN6HN0feSx3Ciztd/zPqMapA5BDacbtY7kd/oAStNkK10BHvWcuGnfVPC2eOtNTYzftYdGLBLUQe/i/rOUfypvmRb1j+P/jCCmcCbymILu2W/AXa7HE79Hu7Q0iLWsocOikrxyIY8JKyd69kHwt0OxqBBWQeFOl42hlKLDkLE/UjFK8ni5sOefBegLBH9ycWnByy+UeSZlm9qsojSKCpBJPlSXSUmBY8zs0ci0rTuhTHETNI60g0S9sw41iBQITSbPZSMGmnANdlvx4zs/tso0Rsl5uSQ7yjPmZbUW4PbBilYaYZxmPAJkkOH08mzhk7cheESwq2xRqZ0dOlFx+LOYwoig6nbSEy2vgWYdilNi/iU7GuP99uWz5StJqM8zXRomaOYxyrH3MeW8MZW7zCOpI4XqlANqrPHiudgX+mh96MLa0zYSITAKzIHk72s0yUDurmMdLNdeg=
