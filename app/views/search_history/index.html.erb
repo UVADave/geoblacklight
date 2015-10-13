@@ -19,7 +19,7 @@
       <%- else -%>
         <div class="pull-right">
           <%- if !@searches.blank? -%>
-            <%= link_to 'View Saved', saved_searches_path, :class => 'btn cyan lighten-2' %>
+            <%= link_to 'View Saved', saved_searches_path, :class => 'btn cyan lighten-1' %>
             &nbsp;
           <%- end -%>
           <%= link_to t('blacklight.search_history.clear.action_title'), clear_search_history_path, :method => :delete, :data => { :confirm => t('blacklight.search_history.clear.action_confirm') }, :class => 'btn red darken-1' %>
