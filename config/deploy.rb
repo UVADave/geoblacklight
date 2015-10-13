@@ -11,6 +11,7 @@ ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 set :deploy_to, "/usr/local/projects/#{fetch(:application)}"
 #set :deploy_to, "/var/www/#{fetch(:application)}"
 
+set :ssh_options, keys: ["config/deploy_id_rsa"] if File.exist?("config/deploy_id_rsa")
 # See https://github.com/capistrano/passenger#usage
 #set :passenger_restart_with_sudo, true
 
