@@ -1,0 +1,33 @@
+<%  # local params:
+    # label
+    # value
+    # options =>
+    #   :remove => url for a remove constraint link
+    #   :classes => array of classes to add to container span
+    options ||= {}
+%>
+<div class="chip <%= options[:classes].join(" ") if options[:classes] %>">
+   <% unless label.blank? %>
+     <%= label %>:
+   <% end %>
+   <% unless value.blank? %>
+     <%= content_tag :span, value, title: value %>
+   <% end %>
+
+   <% unless options[:remove].blank? %>
+     <% accessible_remove_label = content_tag :span, class: 'sr-only' do
+         if label.blank?
+           t('blacklight.search.filters.remove.value', value: value)
+         else
+           t('blacklight.search.filters.remove.label_value', label: label, value: value)
+         end
+       end
+     %>
+
+     <%= link_to(content_tag(:i, "close", class: ['material-icons', 'grey-text', 'text-darken-2']) + accessible_remove_label,
+ 			options[:remove], class: ''
+ 		) %>
+
+   <%- end -%>
+
+</div>

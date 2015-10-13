@@ -54,6 +54,8 @@ $datepicker-focus: rgba(0,0,0, .05) !default;
 $datepicker-selected: $secondary-color !default;
 $datepicker-selected-outfocus: desaturate(lighten($secondary-color, 35%), 15%) !default;
 
+/*** Chips ***/
+$chip-bg-color: #e4e4e4 !default;
 
 /*** Global ***/
 // Media Query Ranges

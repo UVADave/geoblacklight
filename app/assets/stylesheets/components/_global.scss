@@ -22,6 +22,10 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+.btn {
+  padding: 0 1.1rem !important;
+}
+
 /*Utility*/
 .bluetext { backgound-color: $search-button-blue; }
 .light-green { background-color: $light-green; }
