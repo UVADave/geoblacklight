@@ -7,3 +7,11 @@
     -moz-box-shadow: $args1, $args2;
     box-shadow: $args1, $args2;
 }
+
+// Box Sizing
+
+@mixin box-sizing($args) {
+    -webkit-box-sizing: $args;
+    -moz-box-sizing: $args;
+    box-sizing: $args;
+}

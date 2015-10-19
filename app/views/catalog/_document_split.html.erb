@@ -1,4 +1,10 @@
 <div id="documents" class="docView col-md-4">
+  <div class="row"> <!-- Temporary facet placement -->
+    <div class="col-sm-5 col-md-10">
+      <%= render_facet_partials %>
+    </div>
+  </div>
+  <br>
   <%= render documents, :as => :document %>
   <%= render :partial => "paginate_compact", :object => @response if show_pagination? %>
 </div>

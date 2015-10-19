@@ -121,6 +121,12 @@ $collection-hover-bg-color: #ddd !default;
 /* Progress Bar */
 $progress-bar-color: $secondary-color !default;
 
+// Grid Variables
+$num-cols: 12 !default;
+$gutter-width: 1.5rem !default;
+$element-top-margin: $gutter-width/3 !default;
+$element-bottom-margin: ($gutter-width*2)/3 !default;
+
 /* To be organized */
 $uva-orange:         #F36F21;
 $search-orange:      #DA7C0A;

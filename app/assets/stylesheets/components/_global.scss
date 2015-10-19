@@ -71,10 +71,6 @@ a {
 .page_links { padding: 20px; width: 100%; }
 .page_entries { margin: 0em 2em; }
 
-.fixed-header-padding {
-  padding-bottom: 30px;
-}
-
 .constraints-container {
   padding-bottom: 30px;
 }
@@ -410,4 +406,38 @@ footer {
   background-color: #585858;
   color: #FFFFFF;
   border: none;
+}
+.panel.facet_limit {
+  margin-bottom: 5px;
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  //-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  //box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  cursor:pointer;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.panel.facet_limit:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.panel-default > .panel-heading {
+  border-color: transparent;
+  background-color: white;
+  border-bottom: 1px solid #e4e4e4;
+}
+.panel-heading.collapse-toggle > h5.panel-title.facet-field-heading:after {
+  content: "\e313";
+  font-family: 'Material Icons';
+  float:right;
+}
+.panel-heading.collapse-toggle.collapsed > h5.panel-title.facet-field-heading:after {
+  content: "\e315";
+  font-family: 'Material Icons';
+  float:right;
+}
+a.facet_select {
+  padding: 10px;
+}
+.show-document, #sidebar {
+  margin-top: 30px;
 }
