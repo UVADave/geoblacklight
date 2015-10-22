@@ -8,5 +8,8 @@
   <%= render documents, :as => :document %>
   <%= render :partial => "paginate_compact", :object => @response if show_pagination? %>
 </div>
-
+<ul id="nav-mobile" class="side-nav">
+  <li><a href="#">Navbar Link</a></li>
+</ul>
+<!-- <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a> -->
 <%= content_tag :div, '', id: 'map', data: { map: 'index', 'catalog-path'=> catalog_index_path , 'map-bbox' => params[:bbox], basemap: geoblacklight_basemap } %>
