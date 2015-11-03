@@ -33,7 +33,7 @@ module Geoblacklight
       yaml_file = File.exists?(env_file) ? YAML.load(File.open(env_file)) : nil
       yaml_file.each do |key, value|
         ENV[key.to_s] = value
-      end unless yaml_file.nil?
+      end if yaml_file
     end
 
   end
