@@ -2,10 +2,11 @@
 lock '3.4.0'
 
 set :application, 'geoblacklight'
-set :repo_url, 'https://github.com/waynegraham/geoblacklight.git'
+set :repo_url, 'https://github.com/uvalib/geoblacklight.git'
 set :bundle_jobs, 2
 # Default branch is :master
-ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
+#ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
+set :branch, 'develop'
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/usr/local/projects/#{fetch(:application)}"
@@ -29,7 +30,7 @@ set :pty, true
 
 # Default value for :linked_files is []
 #set :linked_files, fetch(:linked_files, []).push('config/database.yml')
-set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
+set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml', 'config/local_env.yml')
 
 # Default value for linked_dirs is []
 #set :linked_dirs, fetch(:linked_dirs, []).push('bin', 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
@@ -71,4 +72,4 @@ namespace :deploy do
 
 end
 
-#after "deploy", "deploy:migrate"
+after "deploy", "deploy:migrate"
