@@ -12,7 +12,7 @@ set :branch, 'develop'
 set :deploy_to, "/usr/local/projects/#{fetch(:application)}"
 #set :deploy_to, "/var/www/#{fetch(:application)}"
 
-set :ssh_options, keys: ["config/deploy_id_rsa"] if File.exist?("config/deploy_id_rsa")
+set :ssh_options, keys: ["/home/dpg3k/Sandboxes/build-deploy-scripts/keys/dev_deploy"] if File.exist?("/home/dpg3k/Sandboxes/build-deploy-scripts/keys/dev_deploy")
 # See https://github.com/capistrano/passenger#usage
 #set :passenger_restart_with_sudo, true
 
