@@ -13,6 +13,8 @@ set :deploy_to, "/usr/local/projects/#{fetch(:application)}"
 #set :deploy_to, "/var/www/#{fetch(:application)}"
 
 set :ssh_options, keys: ["/home/dpg3k/Sandboxes/build-deploy-scripts/keys/dev_deploy"] if File.exist?("/home/dpg3k/Sandboxes/build-deploy-scripts/keys/dev_deploy")
+set :ssh_options, user: 'dpg3k'
+
 # See https://github.com/capistrano/passenger#usage
 #set :passenger_restart_with_sudo, true
 
