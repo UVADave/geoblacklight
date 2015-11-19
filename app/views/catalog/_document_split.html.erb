@@ -1,4 +1,4 @@
-<div id="documents" class="docView col-md-4">
+<div id="documents" class="docView col-md-4" style="display:none">
   <div class="row"> <!-- Temporary facet placement -->
     <div class="col-sm-5 col-md-10">
       <%= render_facet_partials %>
@@ -8,8 +8,26 @@
   <%= render documents, :as => :document %>
   <%= render :partial => "paginate_compact", :object => @response if show_pagination? %>
 </div>
-<ul id="nav-mobile" class="side-nav">
-  <li><a href="#">Navbar Link</a></li>
-</ul>
-<!-- <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a> -->
+
+<nav id="menu">
+  <div class="menu-pane-toggle-button-container">
+    <button aria-label="Results Side Panel" class="menu-link menu-pane-toggle-button">move</button>
+  </div>
+  <div class="menu-header">
+    <div class="navbar-form navbar-left" role="search">
+      <%= render_search_bar  %>
+    </div>
+  </div>
+  <div class="menu-results">
+    <ul>
+      <%= render documents, :as => :document %>
+    </ul>
+  </div>
+  <div class="menu-footer">
+    <div class="menu-pagination">
+      <%= render :partial => "paginate_compact", :object => @response if show_pagination? %>
+    </div>
+  </div>
+  <%= render_results_collection_tools wrapping_class: "search-widgets pull-right" %>
+</nav>
 <%= content_tag :div, '', id: 'map', data: { map: 'index', 'catalog-path'=> catalog_index_path , 'map-bbox' => params[:bbox], basemap: geoblacklight_basemap } %>

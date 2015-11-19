@@ -13,12 +13,18 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <div class="navbar-form navbar-left" role="search">
+      <div class="navbar-form navbar-left" role="search" style="display:none;">
         <%= render_search_bar  %>
       </div>
+
       <ul class="nav navbar-nav navbar-right">
+        <div class="pull-right">
+          <a href="#menu" class="menu-link btn btn-sm">Close Modal</a>
+          <!-- <a href="#" data-activates="slide-out" class="btn btn-sm button-collapse">open modal</a> -->
+        </div>
         <%= render :partial=>'/user_util_links' %>
       </ul>
+
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
