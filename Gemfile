@@ -54,6 +54,8 @@ group :development, :test do
   gem 'spring'
 end
 
+# syslog support
+gem 'syslogger'
 
 gem 'blacklight'
 gem 'geoblacklight'
