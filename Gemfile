@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.1'
+#ruby '2.2.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.0'
@@ -54,6 +54,8 @@ group :development, :test do
   gem 'spring'
 end
 
+# syslog support
+gem 'syslogger'
 
 gem 'blacklight'
 gem 'geoblacklight'

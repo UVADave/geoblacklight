@@ -16,7 +16,9 @@
 # used to set extended properties on the server.
 
 #server 'example.com', user: 'deploy', roles: %w{web app}, my_property: :my_value
-server 'gi.lib.virginia.edu', user: ENV['USER'], roles: %w{web app}
+#server 'gi.lib.virginia.edu', user: ENV['USER'], roles: %w{web app}
+#server 'libsvr35.lib.virginia.edu', user: ENV['USER'], roles: %w{web app}
+server 'libsvr36.lib.virginia.edu', user: ENV['USER'], roles: %w{web app}
 
 
 # Custom SSH Options

@@ -24,5 +24,17 @@ module Geoblacklight
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    #
+    # load environment variables from config/local_env.yml if it exists
+    #
+    config.before_configuration do
+      env_file = File.join(Rails.root, 'config', 'local_env.yml')
+      yaml_file = File.exists?(env_file) ? YAML.load(File.open(env_file)) : nil
+      yaml_file.each do |key, value|
+        ENV[key.to_s] = value
+      end if yaml_file
+    end
+
   end
 end
