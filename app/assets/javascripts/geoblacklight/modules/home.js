@@ -18,4 +18,7 @@ Blacklight.onLoad(function() {
     edge: 'left', // Choose the horizontal origin
     closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
   });
+  $(".menu-link").click(function(){
+    $("#menu").toggleClass("active");
+  });
 });

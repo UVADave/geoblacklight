@@ -18,7 +18,7 @@ en:
       login: 'Sign In'
       logout: 'Sign Out'
       bookmarks: 'Bookmarks'
-      saved_searches: 'View Saved'
+      saved_searches: 'Saved Searches'
       search_history: 'History'
 
     welcome: 'Welcome!'
@@ -78,7 +78,7 @@ en:
       page_title: 'Search History - %{application_name}'
       no_history: 'You have no search history'
       recent: 'Your recent searches'
-      forget: 'forget'
+      forget: 'delete'
       save: 'save'
 
     tools:
