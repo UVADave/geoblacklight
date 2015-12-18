@@ -457,7 +457,8 @@ footer {
   right: 0;
 }
 .menu-results {
-  //overflow-y: auto;
+  min-height: 100%;
+  margin-bottom: -16px;
 }
 .menu-footer {
   background-color: #fff;

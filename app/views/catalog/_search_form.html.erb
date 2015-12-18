@@ -7,17 +7,6 @@
     <span class="sr-only"><%= t('blacklight.search.form.search_field.post_label') %></span>
   <% end %>
 
-<!--  <div id="custom-search-input">
-    <div class="input-group col-md-12">
-      <input type="text" class="form-control input-lg" placeholder="Buscar" />
-        <span class="input-group-btn">
-          <button class="btn btn-primary search-btn" id="search" type="submit">
-            <i class="glyphicon glyphicon-search"></i>
-          </button>
-        </span>
-    </div>
-  </div>-->
-
     <div class="input-group search-input-group">
     <label for="q" class="sr-only"><%= t('blacklight.search.form.search.label') %></label>
     <%= text_field_tag :q, params[:q], :placeholder => t('blacklight.search.form.search.placeholder'), :class => "form-control", :id => "q", :autofocus => should_autofocus_on_search_box? %>

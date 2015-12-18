@@ -30,4 +30,8 @@
   </div>
   <!%= render_results_collection_tools wrapping_class: "search-widgets pull-right" %>
 </nav>
+<div class="pull-right">
+
+</div>
 <%= content_tag :div, '', id: 'map', data: { map: 'index', 'catalog-path'=> catalog_index_path , 'map-bbox' => params[:bbox], basemap: geoblacklight_basemap } %>
+<a href="#menu" class="menu-link btn btn-sm">Close Modal</a>
