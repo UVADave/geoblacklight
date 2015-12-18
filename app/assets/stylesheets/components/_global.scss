@@ -117,7 +117,8 @@ a {
   border-radius: 3px;
   //box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   border: 1px solid #0D3268;
-  padding: 18px;
+  padding: 5px 0px 5px 15px;
+  min-height: 38px;
 }
 .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
     z-index: 2;
