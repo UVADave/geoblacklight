@@ -2,19 +2,16 @@
 lock '3.4.0'
 
 set :application, 'geoblacklight'
-set :repo_url, 'https://github.com/uvalib/geoblacklight.git'
+set :repo_url, 'https://github.com/waynegraham/geoblacklight.git'
 set :bundle_jobs, 2
 # Default branch is :master
-#ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
-set :branch, 'develop'
+ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/usr/local/projects/#{fetch(:application)}"
 #set :deploy_to, "/var/www/#{fetch(:application)}"
 
-set :ssh_options, keys: ["/home/dpg3k/Sandboxes/build-deploy-scripts/keys/dev_deploy"] if File.exist?("/home/dpg3k/Sandboxes/build-deploy-scripts/keys/dev_deploy")
-set :ssh_options, user: 'dpg3k'
-
+set :ssh_options, keys: ["config/deploy_id_rsa"] if File.exist?("config/deploy_id_rsa")
 # See https://github.com/capistrano/passenger#usage
 #set :passenger_restart_with_sudo, true
 
@@ -32,7 +29,7 @@ set :pty, true
 
 # Default value for :linked_files is []
 #set :linked_files, fetch(:linked_files, []).push('config/database.yml')
-set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml', 'config/local_env.yml')
+set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
 
 # Default value for linked_dirs is []
 #set :linked_dirs, fetch(:linked_dirs, []).push('bin', 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
@@ -46,9 +43,9 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/sockets',
 # Default value for keep_releases is 5
 set :keep_releases, 3
 #set :rvm_map_bins, fetch(:rvm_map_bins, []).push('rvmsudo')
-#set :passenger_restart_command, '/usr/local/rvm/gems/ruby-2.1.4/bin/passenger-config restart-app'
+set :passenger_restart_command, '/usr/local/rvm/gems/ruby-2.1.4/bin/passenger-config restart-app'
 #set :passenger_restart_command, 'sudo passenger-config restart-app'
-#set :passenger_restart_with_sudo, true
+set :passenger_restart_with_sudo, true
 
 set :tmp_dir, "/tmp/#{ENV['USER']}"
 
@@ -74,4 +71,4 @@ namespace :deploy do
 
 end
 
-after "deploy", "deploy:migrate"
+#after "deploy", "deploy:migrate"
