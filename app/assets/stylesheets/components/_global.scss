@@ -445,15 +445,48 @@ footer {
 .menu-header {
   height: 80px;
   background-color: #0D3268;
-  width: 101%;
+  width: 100%;
   margin-bottom: 5px;
+  position: absolute;
+  top: 0;
 }
 .menu-pane-toggle-button-container {
   top: 25px;
   position: absolute;
   right: 0;
 }
+.menu-results {
+  //overflow-y: auto;
+}
+.menu-footer {
+  background-color: #fff;
+  position: absolute;
+  //bottom: 0;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.05);
+}
 #content {
   padding-left: 0;
   padding-right: 0;
+}
+.search-input-group {
+  padding-top: 12px;
+}
+.menu-results {
+  padding-top: 85px;
+}
+.show-tools {
+  margin-top: 20px;
+}
+#search {
+  color: #383838;
+  background-color: #ffffff;
+  border-left: 1px solid #dcdcdc;
+  box-shadow: none;
+}
+input#q.search_q.q.form-control {
+  padding: 18px;
+  font-size: 16px;
 }
