@@ -133,6 +133,8 @@ a {
 /* To be organized */
 .page-heading {
   padding-top: 30px;
+  font-size: 3rem;
+  font-weight: 300;
 }
 
 .leaflet-container {
@@ -494,4 +496,20 @@ input#q.search_q.q.form-control {
 }
 .menu-link {
   margin-top: 7px;
+}
+.read {
+  font-size: 20px;
+  font-weight: 300;
+}
+.anchor {
+  text-decoration: underline;
+}
+.description {
+  font-size: 16px;
+}
+.area-heading {
+  font-size: 26px;
+  color: #757575;
+  margin: 0rem 0 1.84rem 0;
+  padding-top: 25px;
 }

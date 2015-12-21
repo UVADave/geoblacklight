@@ -49,6 +49,10 @@ en:
       list_title: 'Your Bookmarks'
       delete: 'Remove'
 
+    about:
+      page_title: 'About'
+      title: 'About Virgo GIS'
+
     saved_searches:
       add:
         success: 'Successfully saved your search.'
