@@ -347,7 +347,7 @@ header[role=banner] {
 }
 footer {
   position: fixed;
-  z-index: 1; // hides z-index from map attribution
+  z-index: 7; // hides z-index from map attribution
   bottom: 0;
   width: 100%;
   height: 50px;
