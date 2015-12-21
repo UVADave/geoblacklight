@@ -347,7 +347,7 @@ header[role=banner] {
 }
 footer {
   position: fixed;
-  z-index: 1000; // hides z-index from map attribution
+  z-index: 1; // hides z-index from map attribution
   bottom: 0;
   width: 100%;
   height: 50px;
@@ -512,4 +512,12 @@ input#q.search_q.q.form-control {
   color: #757575;
   margin: 0rem 0 1.84rem 0;
   padding-top: 25px;
+}
+.introjs-helperNumberLayer{
+  width: 30px !important;
+  height: 30px !important;
+  background: none;
+}
+div.introjs-tooltip {
+  margin-top: 20px;
 }

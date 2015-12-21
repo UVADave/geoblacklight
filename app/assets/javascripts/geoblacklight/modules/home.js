@@ -13,6 +13,7 @@ Blacklight.onLoad(function() {
       staticButton: '<a class="btn orange darken-2">Search here</a>'
     }));
   });
+  show_intro();
   $('.button-collapse').sideNav({
     menuWidth: 450, // Default is 240
     edge: 'left', // Choose the horizontal origin
@@ -21,4 +22,14 @@ Blacklight.onLoad(function() {
   $(".menu-link").click(function(){
     $("#menu").toggleClass("active");
   });
+
+  function show_intro() {
+    if (localStorage.getItem('intro_shown')) {
+      // already shown
+      return
+    }
+    localStorage.setItem('intro_shown', true);
+    introJs().setOption("tooltipPosition", "auto").start();
+    }
+
 });
