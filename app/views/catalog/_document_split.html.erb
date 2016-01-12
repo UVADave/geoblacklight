@@ -23,6 +23,7 @@
     <ul>
       <%= render documents, :as => :document %>
     </ul>
+    <%= link_to t('blacklight.bookmarks.clear.action_title'), clear_bookmarks_path, :method => :delete, :data => { :confirm => t('blacklight.bookmarks.clear.action_confirm') }, :class => 'clear-bookmarks btn red darken-1' %>
   </div>
   <div class="menu-footer">
     <div class="menu-pagination">
