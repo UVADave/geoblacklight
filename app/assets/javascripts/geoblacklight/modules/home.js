@@ -20,7 +20,15 @@ Blacklight.onLoad(function() {
     closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
   });
   $(".menu-link").click(function(){
+      var $this = $(this);
+      $this.toggleClass('SeeMore');
+      if($this.hasClass('SeeMore')){
+          $this.text('Show');
+      } else {
+          $this.text('Hide');
+      }
     $("#menu").toggleClass("active");
+    $("#toggle-sidenav").toggleClass("active");
   });
 
   function show_intro() {

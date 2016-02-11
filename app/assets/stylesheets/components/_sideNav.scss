@@ -32,6 +32,28 @@
   transform: translate(-100%, 0px);
 }
 
+#toggle-sidenav {
+  top: 125px;
+  position: fixed;
+  left: 475px;
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  -webkit-transition: 0.15s ease;
+  -moz-transition: 0.15s ease;
+  -o-transition: 0.15s ease;
+  transition: 0.15s ease;
+}
+
+#toggle-sidenav.active {
+  -webkit-transform: translate(-475px, 0px);
+  -moz-transform: translate(-475px, 0px);
+  -o-transform: translate(-475px, 0px);
+  -ms-transform: translate(-475px, 0px);
+  transform: translate(-475px, 0px);
+}
 .side-nav {
   position: fixed;
   width: 240px;
