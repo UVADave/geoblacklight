@@ -11,7 +11,9 @@
       <a id="logo" class="navbar-brand" href="/">Virgo GIS</a>
     </div>
     <% if current_page?('/') || current_page?('/bookmarks') %>
-      <a id="toggle-sidenav" class="menu-link btn btn-sm">Hide</a>
+      <% unless @document_list.blank? %>
+        <a id="toggle-sidenav" class="menu-link btn btn-sm">Hide</a>
+      <% end %>
     <% end %>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
